@@ -1,0 +1,63 @@
+﻿using PuzzleGame.Model;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using UnityEngine;
+using UnityEngine.Networking;
+
+public class BranchManager : BaseManager
+{
+    private Branch branch;
+    public GameObject item;
+
+    public override void OnInit(Interactive interactive)
+    {
+        float padding = 2f;
+        float width=0, height = 0;
+        List<GameObject> list = new List<GameObject>();
+        branch = interactive as Branch;
+        for(int i = 0; i < branch.PIC.Count; i++)
+        {
+            GameObject gameObject = Instantiate(item);
+            gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load("Image/" + branch.PIC[i],typeof(Sprite)) as Sprite;
+            gameObject.transform.SetParent(transform);
+            gameObject.GetComponent<BranchItem>().Name = branch.name[i];
+            list.Add(gameObject);
+            width += gameObject.GetComponent<SpriteRenderer>().sprite.rect.width;
+            height += gameObject.GetComponent<SpriteRenderer>().sprite.rect.height;
+        }
+        //计算图片大小，布局
+        float kWidth = Screen.width * 0.5f / width;
+        float kHeight = Screen.height * 0.5f / height;
+        for (int i = 0; i < list.Count; i++)
+        {
+            list[i].transform.localScale = new Vector3(kWidth, kHeight, 1);
+            list[i].transform.position = new Vector3(-8+padding * (i + 1)+ width/100/list.Count*i, 2, 0);
+        }
+
+    }
+
+    IEnumerator LoadSprite(string fileName)
+    {
+        var uri = new System.Uri(Path.Combine(Application.streamingAssetsPath, fileName));
+        UnityWebRequest wr = UnityWebRequestTexture.GetTexture(uri.AbsoluteUri);
+        yield return wr.SendWebRequest();
+        while (!wr.isDone) { }
+        Texture2D tex = DownloadHandlerTexture.GetContent(wr);
+        Sprite s = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height),
+                                 new Vector2(0.5f, 0.5f));
+        //target.GetComponent<SpriteRenderer>().sprite = s;
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}

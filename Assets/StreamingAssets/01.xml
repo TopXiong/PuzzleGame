@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Scenes>
+  <Scene PIC="BG1.PNG">
+    <Session PIC="导演旁白.png" name="导演旁白">你有想杀掉的人吗</Session>
+    <Session PIC="导演旁白.png" name="导演旁白">讨厌的人，大打出手才能解恨的人</Session>
+    <Branch  PIC-0="男人" PIC-1="女人" PIC-2="狗" name-0="男人" name-1="女人" name-2="狗">
+      <If target="男人">
+        <Session PIC="导演旁白.png" name="导演旁白">你选择了男人</Session>
+        <Session PIC="导演旁白.png" name="导演旁白">你为什么要选男人</Session>
+        <Session PIC="导演旁白.png" name="导演旁白">这个男人好看吗</Session>
+      </If>
+      <If target="女人">
+        <Session PIC="导演旁白.png" name="导演旁白">你选择了女人</Session>
+      </If>
+      <If target="狗">
+        <Session PIC="导演旁白.png" name="导演旁白">你选择了男人</Session>
+      </If>
+    </Branch>
+    <Session PIC="导演旁白.png" name="导演旁白">想要他在眼前消失的人</Session>
+    <Session PIC="导演旁白.png" name="导演旁白">无论是谁，周围一定有几个这样的人</Session>
+    <Session PIC="导演旁白.png" name="导演旁白">此外在那先人当中，想着他死了多好</Session>    
+  </Scene>
+
+  <Scene PIC="赌场背景.PNG">
+    <Session> 你徐徐漫步在赌场里，倾听对话声和轮盘转动的噼啪声。你时不时地停下来，看别人发一手二十一点的牌，或者观察花旗骰赌桌上掷骰子的情形。</Session>
+    <Session>
+      无论在什么时间，赌场大厅里总是这幕热闹的景象，这点总能让我惊讶。现在是早晨八点钟，看起来和晚上八点钟时（或者之间的其他任何时间）几乎一模一样。赌场里嗡嗡的人声拥有一种始终不变的催眠音调赌徒们的疯狂总是如出一辙。无论拉斯维加斯赌场外或世界其他地方可能在发生什么事，在赌场里面，时间总是静止的。我数不清自己有多少次跨出赌场，惊讶地发现外面在下雨，或者月亮高挂在天空中，或者太阳把人行道烤得滚烫，又抑或外面与我走进赌场时有着其他方面的截然不同。
+    </Session>
+    <Session PIC="父亲.png" name="我"> 我徐徐漫步在赌场里，倾听对话声和轮盘转动的噼啪声。我时不时地停下来，看别人发一手二十一点的牌，或者观察花旗骰赌桌上掷骰子的情形。</Session>
+    <Seek>鞋底</Seek>
+
+  </Scene>
+
+
+</Scenes>
