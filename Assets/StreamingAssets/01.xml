@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <Scenes>
+  
   <Scene PIC="BG1.PNG">
     <Session PIC="导演旁白.png" name="导演旁白">你有想杀掉的人吗</Session>
     <Session PIC="导演旁白.png" name="导演旁白">讨厌的人，大打出手才能解恨的人</Session>
@@ -9,6 +10,8 @@
         <Session PIC="导演旁白.png" name="导演旁白">你选择了男人</Session>
         <Session PIC="导演旁白.png" name="导演旁白">你为什么要选男人</Session>
         <Session PIC="导演旁白.png" name="导演旁白">这个男人好看吗</Session>
+        <Inventory target="男人">0</Inventory>
+        <Jump Id="0" target="1">0</Jump>
       </If>
       <If target="女人">
         <Session PIC="导演旁白.png" name="导演旁白">你选择了女人</Session>
@@ -17,9 +20,12 @@
         <Session PIC="导演旁白.png" name="导演旁白">你选择了男人</Session>
       </If>
     </Branch>
+
+    <Select item-0="第0" item-1="第1" item-2="第2" item-3="第3">0</Select>    
+    <Jump Id="1" target="">0</Jump>
     <Session PIC="导演旁白.png" name="导演旁白">想要他在眼前消失的人</Session>
     <Session PIC="导演旁白.png" name="导演旁白">无论是谁，周围一定有几个这样的人</Session>
-    <Session PIC="导演旁白.png" name="导演旁白">此外在那先人当中，想着他死了多好</Session>    
+    <Session PIC="导演旁白.png" name="导演旁白">此外在那先人当中，想着他死了多好</Session>
   </Scene>
 
   <Scene PIC="赌场背景.PNG">

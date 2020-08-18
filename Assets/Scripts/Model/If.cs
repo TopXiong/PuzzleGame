@@ -7,6 +7,7 @@ using UnityEngine;
 
 namespace PuzzleGame.Model
 {
+
     [AttributeUsage(AttributeTargets.All)]
     public class If : ComplexInteraction
     {

@@ -3,31 +3,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClickManager : MonoBehaviour
+namespace PuzzleGame.Manager
 {
-    // Start is called before the first frame update
-    void Start()
+    /// <summary>
+    /// 点击事件管理，所有的点击又这里产生
+    /// </summary>
+    public class ClickManager : MonoBehaviour
     {
-        Debug.Log("Game Start");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetMouseButtonUp(0))
+        // Start is called before the first frame update
+        void Start()
         {
-            Vector3 v = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(new Vector2(v.x, v.y), new Vector2(v.x, v.y), 0.1f); 
-            if (Physics2D.Raycast(new Vector2(v.x, v.y), new Vector2(v.x, v.y), 0.1f))
+            Debug.Log("Game Start");
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            if (Input.GetMouseButtonUp(0))
             {
-                try
+                Vector3 v = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                RaycastHit2D hit = Physics2D.Raycast(new Vector2(v.x, v.y), new Vector2(v.x, v.y), 0.1f);
+                if (Physics2D.Raycast(new Vector2(v.x, v.y), new Vector2(v.x, v.y), 0.1f))
                 {
-                    Debug.Log("Click"+hit.collider.gameObject);
-                    hit.collider.gameObject.GetComponent<BaseClickObject>().OnClick();
-                }
-                catch (Exception e)
-                {
-                    Debug.LogError(e);
+                    try
+                    {
+                        Debug.Log("Click" + hit.collider.gameObject);
+                        hit.collider.gameObject.GetComponent<BaseClickObject>().OnClick();
+                    }
+                    catch (Exception e)
+                    {
+                        Debug.LogError(e);
+                    }
                 }
             }
         }

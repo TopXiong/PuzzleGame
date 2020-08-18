@@ -12,6 +12,5 @@ namespace PuzzleGame.Model
     {
         public string PIC;
         public string name;
-
     }
 }

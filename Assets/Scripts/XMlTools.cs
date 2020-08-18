@@ -7,11 +7,18 @@ using PuzzleGame.Model;
 using System.Linq;
 using System.Xml;
 
+/// <summary>
+/// XML解析工具
+/// </summary>
 public class XMlTools
 {
     private Type[] types;
     private XmlDocument xmlDocument;
 
+    /// <summary>
+    /// 获取XMl解析器
+    /// </summary>
+    /// <returns></returns>
     public static XMlTools GetInstance()
     {
         return new XMlTools();
@@ -80,15 +87,30 @@ public class XMlTools
 
             }
             else
-            {
+            {                
                 type.GetField(attribute.Name).SetValue(obj, attribute.Value);
                 type.GetField("value").SetValue(obj, interactive.InnerText);
-            }
-            //dfs解析value
-            if (interactive.ChildNodes[0].ChildNodes.Count > 0)
+            }            
+        }
+        obj.Initialized();
+        //对Jump的特殊解析
+        if (obj is Jump)
+        {
+            Jump jump = obj as Jump;
+            if (Jump.JumpList.ContainsKey(jump.Id))
             {
-                obj = dfs(interactive, obj);
+                throw new Exception("JumpId : " + jump.Id + "repeated");
             }
+            Jump.JumpList.Add(jump.Id, jump);
+        }
+        if(interactive.ChildNodes[0] == null)
+        {
+            return obj;
+        }
+        //dfs解析value
+        if (interactive.ChildNodes[0].ChildNodes.Count > 0)
+        {
+            obj = dfs(interactive, obj);
         }
         return obj;
     }
