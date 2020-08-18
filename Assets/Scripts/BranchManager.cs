@@ -12,11 +12,11 @@ namespace PuzzleGame.Manager
     /// </summary>
     public class BranchManager : BaseManager
     {
-        private Branch branch;
+        private Branch m_branch;
         /// <summary>
         /// 字物体
         /// </summary>
-        public GameObject item;
+        public GameObject m_item;
 
         /// <summary>
         /// 初始化，导入图片，并根据图片大小计算布局
@@ -27,13 +27,13 @@ namespace PuzzleGame.Manager
             float padding = 2f;
             float width = 0, height = 0;
             List<GameObject> list = new List<GameObject>();
-            branch = interactive as Branch;
-            for (int i = 0; i < branch.PIC.Count; i++)
+            m_branch = interactive as Branch;
+            for (int i = 0; i < m_branch.m_PIC.Count; i++)
             {
-                GameObject gameObject = Instantiate(item);
-                gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load("Image/" + branch.PIC[i], typeof(Sprite)) as Sprite;
+                GameObject gameObject = Instantiate(m_item);
+                gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load("Image/" + m_branch.m_PIC[i], typeof(Sprite)) as Sprite;
                 gameObject.transform.SetParent(transform);
-                gameObject.GetComponent<BranchItem>().Name = branch.name[i];
+                gameObject.GetComponent<BranchItem>().m_Name = m_branch.m_name[i];
                 list.Add(gameObject);
                 width += gameObject.GetComponent<SpriteRenderer>().sprite.rect.width;
                 height += gameObject.GetComponent<SpriteRenderer>().sprite.rect.height;

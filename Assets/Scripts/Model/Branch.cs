@@ -15,15 +15,15 @@ namespace PuzzleGame.Model
         /// <summary>
         /// 选项的图片列表
         /// </summary>
-        public List<string> PIC;
+        public List<string> m_PIC;
         /// <summary>
         /// 选择的名字列表
         /// </summary>
-        public List<string> name;
+        public List<string> m_name;
 
         public override string ToString()
         {
-            return PIC.ToArray() + "----" + name.ToArray();
+            return m_PIC.ToArray() + "----" + m_name.ToArray();
         }
     }
 }

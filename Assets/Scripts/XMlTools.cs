@@ -77,19 +77,19 @@ public class XMlTools
             {
                 //为null则创建
                 //Debug.Log(attribute.Name.Split('-')[0] + "---" + obj.GetType().Name);
-                if (type.GetField(attribute.Name.Split('-')[0]).GetValue(obj) == null)
+                if (type.GetField("m_" + attribute.Name.Split('-')[0]).GetValue(obj) == null)
                 {
                     object list = Activator.CreateInstance(typeof(List<string>));
-                    type.GetField(attribute.Name.Split('-')[0]).SetValue(obj, list);
+                    type.GetField("m_" + attribute.Name.Split('-')[0]).SetValue(obj, list);
                 }
                 //为列表添加值
-                (type.GetField(attribute.Name.Split('-')[0]).GetValue(obj) as List<string>).Add(attribute.Value);
+                (type.GetField("m_" + attribute.Name.Split('-')[0]).GetValue(obj) as List<string>).Add(attribute.Value);
 
             }
             else
             {                
-                type.GetField(attribute.Name).SetValue(obj, attribute.Value);
-                type.GetField("value").SetValue(obj, interactive.InnerText);
+                type.GetField("m_" + attribute.Name).SetValue(obj, attribute.Value);
+                type.GetField("m_" + "value").SetValue(obj, interactive.InnerText);
             }            
         }
         obj.Initialized();
@@ -97,11 +97,11 @@ public class XMlTools
         if (obj is Jump)
         {
             Jump jump = obj as Jump;
-            if (Jump.JumpList.ContainsKey(jump.Id))
+            if (Jump.m_JumpList.ContainsKey(jump.m_Id))
             {
-                throw new Exception("JumpId : " + jump.Id + "repeated");
+                throw new Exception("JumpId : " + jump.m_Id + "repeated");
             }
-            Jump.JumpList.Add(jump.Id, jump);
+            Jump.m_JumpList.Add(jump.m_Id, jump);
         }
         if(interactive.ChildNodes[0] == null)
         {

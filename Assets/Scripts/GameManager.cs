@@ -7,7 +7,6 @@ using System.Net;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
 
 namespace PuzzleGame.Manager
 {
@@ -17,49 +16,56 @@ namespace PuzzleGame.Manager
     public class GameManager : MonoBehaviour
     {
         [SerializeField]
-        private string PICName;
-        private static GameManager _instance;
+        private string m_PICName;
+        private static GameManager m_instance;
         /// <summary>
         /// 交互列表
         /// </summary>
-        public List<Interactive> interactives;
+        public List<Interactive> m_interactives;
         /// <summary>
         /// 当前场景号
         /// </summary>
-        public int SceneIndex = 0;
+        public int m_SceneIndex = 0;
         /// <summary>
         /// 当前交互号
         /// </summary>
         public int InteractivesIndex
         {
-            get { return interactivesIndex; }
-            set { interactivesIndex = value;
-                UpdateTextString(interactives[InteractivesIndex].value);
+            get { return m_InteractivesIndex; }
+            set {
+                m_InteractivesIndex = value;
+                if(InteractivesIndex<m_interactives.Count)
+                    Next();
+                else
+                {
+                    m_SceneIndex++;
+                    StartCoroutine(initXML(m_SceneIndex));
+                }
             }
         }
-        private int interactivesIndex = 0;
+        private int m_InteractivesIndex = -1;
         /// <summary>
         /// 交互文字
         /// </summary>
-        public Text text;
+        public Text m_text;
         /// <summary>
         /// 文字刷新间隔
         /// </summary>
-        public float TextUpdateInterval = 0.2f;
+        public float m_TextUpdateInterval = 0.1f;
         /// <summary>
         /// 背景图片，自定义交互的父物体
         /// </summary>
-        public GameObject background;
+        public GameObject m_background;
         /// <summary>
         /// 当前刷新文字编号
         /// </summary>
-        private int TextIndex = 0;
+        private int m_TextIndex = 0;
         /// <summary>
         /// 表示遇到特殊交互时暂停主逻辑
         /// </summary>
-        public bool suspend = false;
-        private IEnumerator TextUpdateHandle;
-
+        public bool m_suspend = false;
+        private IEnumerator m_TextUpdateHandle;
+        public GameObject m_MainPanel;
         /// <summary>
         /// 单例模式
         /// </summary>
@@ -67,31 +73,100 @@ namespace PuzzleGame.Manager
         {
             get
             {
-                if (_instance == null)
+                if (m_instance == null)
                     //则创建一个
-                    _instance = GameObject.Find("GameManager").GetComponent<GameManager>();
+                    m_instance = GameObject.Find("Managers").GetComponent<GameManager>();
                 //返回这个实例
-                return _instance;
+                return m_instance;
             }
         }
 
         void Start()
         {
-            StartCoroutine(initXML());
+            StartCoroutine(initXML(m_SceneIndex));
             Debug.Log(Screen.width + "----" + Screen.height);
         }
 
-        private IEnumerator initXML()
+        private IEnumerator initXML(int SceneIndex)
         {
             var request = UnityWebRequest.Get(Application.streamingAssetsPath + "/01.xml");
             yield return request.SendWebRequest();
             if (request.downloadHandler.text != string.Empty)
             {
                 Debug.Log("StreamingAssets读取成功");
-                interactives = XMlTools.GetInstance().GetInteractives(request.downloadHandler.text, SceneIndex, out PICName);
-                TextUpdateHandle = TextUpdate(interactives[InteractivesIndex].value);
-                StartCoroutine(TextUpdateHandle);
+                m_interactives = XMlTools.GetInstance().GetInteractives(request.downloadHandler.text, SceneIndex, out m_PICName);
+                m_TextUpdateHandle = TextUpdate("");
+                StartCoroutine(m_TextUpdateHandle);
                 StartCoroutine(MouseListen());
+                InteractivesIndex++;
+            }
+        }
+
+        private IEnumerator LoadMusic(string name) 
+        {
+            string path = Application.dataPath;
+            int i = path.LastIndexOf("/");
+            path = path.Substring(0, i);
+            path += "/Music/" + name;
+            var request = UnityWebRequestMultimedia.GetAudioClip(path, AudioType.WAV);
+            yield return request.SendWebRequest();
+            if (request.error == null && request.isDone)
+            {
+                AudioClip clip = DownloadHandlerAudioClip.GetContent(request);
+                GetComponent<AudioSource>().clip = clip;
+                GetComponent<AudioSource>().Play();
+            }
+            else
+            {
+                GetComponent<AudioSource>().Stop();
+            }
+        }
+        
+
+        private void Next()
+        {
+            //判断是不是基础的交互
+            if (m_interactives[InteractivesIndex] is Session)
+            {
+                Session session = m_interactives[InteractivesIndex] as Session;
+                m_MainPanel.SetActive(true);
+                m_MainPanel.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = Resources.Load("Image/portrait/" + session.m_PIC, typeof(Sprite)) as Sprite;
+                UpdateTextString(session.m_value);
+            }
+            else if (m_interactives[InteractivesIndex] is If)
+            {
+                If @if = m_interactives[InteractivesIndex] as If;
+                m_interactives.InsertRange(InteractivesIndex, @if.Interactives);
+            }
+            else if (m_interactives[InteractivesIndex] is Jump)
+            {
+                Jump jump = m_interactives[InteractivesIndex] as Jump;
+                if (Jump.m_JumpList.ContainsKey(jump.m_target))
+                {
+                    InteractivesIndex = m_interactives.IndexOf(Jump.m_JumpList[jump.m_target]) + 1;
+                }
+                //interactives.InsertRange(InteractivesIndex, @if.Interactives);
+            }
+            else if (m_interactives[InteractivesIndex] is BackGround)
+            {
+                BackGround backGround = m_interactives[InteractivesIndex] as BackGround;
+                m_background.GetComponent<Image>().sprite = Resources.Load("Image/BackGround/" + backGround.m_PIC, typeof(Sprite)) as Sprite;
+                InteractivesIndex++;
+            }
+            else if (m_interactives[InteractivesIndex] is BGM)
+            {
+                BGM bgm = m_interactives[InteractivesIndex] as BGM;
+                StartCoroutine(LoadMusic(bgm.m_Music));
+                InteractivesIndex++;
+            }
+            else
+            {
+                m_suspend = true;
+                Debug.Log("Prefabs/" + m_interactives[InteractivesIndex].GetType().Name + "/" + m_interactives[InteractivesIndex].GetType().Name);
+                GameObject prefab = Instantiate(Resources.Load("Prefabs/" + m_interactives[InteractivesIndex].GetType().Name + "/" + m_interactives[InteractivesIndex].GetType().Name, typeof(GameObject)) as GameObject);
+                prefab.transform.SetParent(m_background.transform);
+                prefab.GetComponent<BaseManager>().OnInit(m_interactives[InteractivesIndex]);
+                //特殊交互暂停主逻辑
             }
         }
 
@@ -106,45 +181,15 @@ namespace PuzzleGame.Manager
             while (true)
             {
                 MouseTime -= Time.deltaTime;
-                if (MouseTime <= 0 && !suspend)
+                if (MouseTime <= 0 && !m_suspend)
                 {
                     if (Input.GetMouseButton(0))
                     {
                         //重置
                         MouseTime = MouseInterval;
                         InteractivesIndex++;
-                        text.text = "";
-                        TextIndex = 0;
-
-                        //判断是不是特殊的固定的交互
-                        if (interactives[InteractivesIndex] is Session)
-                        {
-                            UpdateTextString(interactives[InteractivesIndex].value);
-                        }
-                        else if (interactives[InteractivesIndex] is If)
-                        {
-                            If @if = interactives[InteractivesIndex] as If;
-                            interactives.InsertRange(InteractivesIndex, @if.Interactives);
-                        }
-                        else if (interactives[InteractivesIndex] is Jump)
-                        {
-                            Jump jump = interactives[InteractivesIndex] as Jump;
-                            if (Jump.JumpList.ContainsKey(jump.target))
-                            {
-                                InteractivesIndex = interactives.IndexOf(Jump.JumpList[jump.target]) + 1;                               
-                            }
-                            //interactives.InsertRange(InteractivesIndex, @if.Interactives);
-                        }
-                        else
-                        {
-                            suspend = true;
-                            Debug.Log("Prefabs/" + interactives[InteractivesIndex].GetType().Name + "/" + interactives[InteractivesIndex].GetType().Name);
-                            GameObject prefab = Instantiate(Resources.Load("Prefabs/" + interactives[InteractivesIndex].GetType().Name + "/" + interactives[InteractivesIndex].GetType().Name, typeof(GameObject)) as GameObject);
-                            prefab.transform.SetParent(background.transform);
-                            prefab.GetComponent<BaseManager>().OnInit(interactives[InteractivesIndex]);
-                            //特殊交互暂停主逻辑
-                        }
-
+                        m_text.text = "";
+                        m_TextIndex = 0;                        
                     }
                 }
                 yield return null;
@@ -153,9 +198,9 @@ namespace PuzzleGame.Manager
 
         private void UpdateTextString(string value)
         {
-            StopCoroutine(TextUpdateHandle);
-            TextUpdateHandle = TextUpdate(value);
-            StartCoroutine(TextUpdateHandle);
+            StopCoroutine(m_TextUpdateHandle);
+            m_TextUpdateHandle = TextUpdate(value);
+            StartCoroutine(m_TextUpdateHandle);
         }
 
         /// <summary>
@@ -164,21 +209,21 @@ namespace PuzzleGame.Manager
         /// <returns></returns>
         private IEnumerator TextUpdate(string value)
         {
-            float TextTime = TextUpdateInterval;
-            text.text = "";
+            float TextTime = m_TextUpdateInterval;
+            m_text.text = "";
             while (true)
             {
                 TextTime -= Time.deltaTime;
 
-                if (TextTime <= 0 && !suspend)
+                if (TextTime <= 0 && !m_suspend)
                 {
-                    TextTime = TextUpdateInterval;
+                    TextTime = m_TextUpdateInterval;
 
-                    if (TextIndex < value.Length)
+                    if (m_TextIndex < value.Length)
                     {
 
-                        text.text += value[TextIndex];
-                        TextIndex++;
+                        m_text.text += value[m_TextIndex];
+                        m_TextIndex++;
                     }
 
                 }
@@ -192,10 +237,10 @@ namespace PuzzleGame.Manager
         /// </summary>
         public void EndSuspend(string Return)
         {
-            ComplexInteraction complexInteraction = interactives[InteractivesIndex] as ComplexInteraction;
+            ComplexInteraction complexInteraction = m_interactives[InteractivesIndex] as ComplexInteraction;
             if (complexInteraction == null)
             {
-                suspend = false;
+                m_suspend = false;
                 return;
             }
             foreach (Interactive interactive in complexInteraction.Interactives)
@@ -203,14 +248,14 @@ namespace PuzzleGame.Manager
                 if (interactive is If)
                 {
                     If @if = interactive as If;
-                    if (@if.target.Equals(Return))
+                    if (@if.m_target.Equals(Return))
                     {
-                        interactives.InsertRange(InteractivesIndex + 1, @if.Interactives);
+                        m_interactives.InsertRange(InteractivesIndex + 1, @if.Interactives);
                     }
                 }
             }
-            InteractivesIndex++;            
-            suspend = false;
+            InteractivesIndex++;
+            m_suspend = false;
         }
 
         // Update is called once per frame

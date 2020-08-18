@@ -17,7 +17,7 @@ namespace PuzzleGame.Manager
         public override void OnInit(Interactive interactive)
         {
             Select select = interactive as Select;
-            Debug.Log(string.Join(",", select.item.ToArray()));
+            Debug.Log(string.Join(",", select.m_item.ToArray()));
             StartCoroutine(TimeDelay());
         }
 

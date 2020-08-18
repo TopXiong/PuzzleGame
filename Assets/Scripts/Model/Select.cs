@@ -15,6 +15,6 @@ namespace PuzzleGame.Model
         /// <summary>
         /// 未定
         /// </summary>
-        public List<string> item;
+        public List<string> m_item;
     }
 }

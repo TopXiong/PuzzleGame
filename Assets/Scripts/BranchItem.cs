@@ -14,14 +14,14 @@ namespace PuzzleGame.Manager
         /// <summary>
         /// 选项的名字
         /// </summary>
-        public string Name;
+        public string m_Name;
 
         /// <summary>
         /// 点击事件
         /// </summary>
         public override void OnClick()
         {
-            GameManager.Instance.EndSuspend(Name);
+            GameManager.Instance.EndSuspend(m_Name);
             Destroy(transform.parent.gameObject, 2f);
             transform.parent.gameObject.SetActive(false);
         }

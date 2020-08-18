@@ -3,49 +3,57 @@
 <Scenes>
 
   <Scene PIC="BG1.PNG">
-    <Session PIC="导演旁白.png" name="导演旁白">你有想杀掉的人吗</Session>
-    <Session PIC="导演旁白.png" name="导演旁白">讨厌的人，大打出手才能解恨的人</Session>
-    <Session PIC="导演旁白.png" name="导演旁白">想要他在眼前消失的人</Session>
-    <Session PIC="导演旁白.png" name="导演旁白">无论是谁，周围一定有几个这样的人</Session>
-    <Session PIC="导演旁白.png" name="导演旁白">此外在那些人当中，想着他死了多好</Session>
-    <Session PIC="导演旁白.png" name="导演旁白">如果可以的话就会杀掉他</Session>
-    <Session PIC="导演旁白.png" name="导演旁白">这样的人，每个人的生活中多多少少会有一个</Session>
-    <Session PIC="导演旁白.png" name="导演旁白">但是现实中，并不能去杀了他</Session>
-    <Session PIC="导演旁白.png" name="导演旁白">那么，为什么不能这么做呢</Session>
-    <Session PIC="导演旁白.png" name="导演旁白">是因为从伦理上说杀人不好吗</Session>
-    <Session PIC="导演旁白.png" name="导演旁白">还是道德感和正义感作怪</Session>
-    <Session PIC="导演旁白.png" name="导演旁白">又或者是人的理性呢</Session>
-    <Session PIC="导演旁白.png" name="导演旁白">其实最大的原因是</Session>
-    <Session PIC="导演旁白.png" name="导演旁白">人们不想被抓住</Session>
-    <Session PIC="导演旁白.png" name="导演旁白">当今国内，杀人凶手和被害人都是怎样的关系</Session>
-    <Session PIC="导演旁白.png" name="导演旁白">各位知道吗</Session>
-    <Session PIC="导演旁白.png" name="导演旁白">大约90%的被害人</Session>
-    <Session PIC="导演旁白.png" name="导演旁白">是被认识的人杀掉的</Session>
-    <Session PIC="导演旁白.png" name="导演旁白">也就是说如果你被杀了</Session>
-    <Session PIC="导演旁白.png" name="导演旁白">那个人有90%的几率是你的家人，恋人，朋友</Session>
-    <Session PIC="导演旁白.png" name="导演旁白">所以警察会调查被害人的人际关系</Session>
-    <Session PIC="导演旁白.png" name="导演旁白">但如果是一个毫无动机的人呢</Session>
-    <Session PIC="导演旁白.png" name="导演旁白">如果你有一个想杀掉的人A</Session>
-    <Session PIC="导演旁白.png" name="导演旁白">只要你和A不存在人际关系的话</Session>
-    <Session PIC="导演旁白.png" name="导演旁白">即使杀了他，你被抓住的可能性也是微乎其微的</Session>
-    <Session PIC="导演旁白.png" name="导演旁白">前面这些，再怎么说也是纸上谈兵</Session>
-    <Session PIC="导演旁白.png" name="导演旁白">可现实中真的存在实践这套理论的人</Session>
+    <BackGround PIC ="Intro"></BackGround>
+    <BGM Music="林ゆうき - 住人の奇行.wav"></BGM>
+    <Session PIC="导演旁白" name="导演旁白">你有想杀掉的人吗</Session>
+    <Session PIC="导演旁白" name="导演旁白">讨厌的人，大打出手才能解恨的人</Session>
+    <Session PIC="导演旁白" name="导演旁白">想要他在眼前消失的人</Session>
+    <Session PIC="导演旁白" name="导演旁白">无论是谁，周围一定有几个这样的人</Session>
+    <Session PIC="导演旁白" name="导演旁白">此外在那些人当中，想着他死了多好</Session>
+    <Session PIC="导演旁白" name="导演旁白">如果可以的话就会杀掉他</Session>
+    <Session PIC="导演旁白" name="导演旁白">这样的人，每个人的生活中多多少少会有一个</Session>
+    <Session PIC="导演旁白" name="导演旁白">但是现实中，并不能去杀了他</Session>
+    <Session PIC="导演旁白" name="导演旁白">那么，为什么不能这么做呢</Session>
+    <Session PIC="导演旁白" name="导演旁白">是因为从伦理上说杀人不好吗</Session>
+    <Session PIC="导演旁白" name="导演旁白">还是道德感和正义感作怪</Session>
+    <Session PIC="导演旁白" name="导演旁白">又或者是人的理性呢</Session>
+    <Session PIC="导演旁白" name="导演旁白">其实最大的原因是</Session>
+    <Session PIC="导演旁白" name="导演旁白">人们不想被抓住</Session>
+    <Session PIC="导演旁白" name="导演旁白">当今国内，杀人凶手和被害人都是怎样的关系</Session>
+    <Session PIC="导演旁白" name="导演旁白">各位知道吗</Session>
+    <Session PIC="导演旁白" name="导演旁白">大约90%的被害人</Session>
+    <Session PIC="导演旁白" name="导演旁白">是被认识的人杀掉的</Session>
+    <Session PIC="导演旁白" name="导演旁白">也就是说如果你被杀了</Session>
+    <Session PIC="导演旁白" name="导演旁白">那个人有90%的几率是你的家人，恋人，朋友</Session>
+    <Session PIC="导演旁白" name="导演旁白">所以警察会调查被害人的人际关系</Session>
+    <Session PIC="导演旁白" name="导演旁白">但如果是一个毫无动机的人呢</Session>
+    <Session PIC="导演旁白" name="导演旁白">如果你有一个想杀掉的人A</Session>
+    <Session PIC="导演旁白" name="导演旁白">只要你和A不存在人际关系的话</Session>
+    <Session PIC="导演旁白" name="导演旁白">即使杀了他，你被抓住的可能性也是微乎其微的</Session>
+    <Session PIC="导演旁白" name="导演旁白">前面这些，再怎么说也是纸上谈兵</Session>
+    <Session PIC="导演旁白" name="导演旁白">可现实中真的存在实践这套理论的人</Session>
+    <BGM Music=""></BGM>
+    <BackGround PIC ="搬家"></BackGround>
+    <Session PIC="手冢翔太" name="手冢翔太">辛苦啦，终于搬过来了</Session>
+    <Session PIC="手冢菜奈" name="手冢菜奈">才搬过来，还有很多要做的呢</Session>
+    <BackGround PIC ="翔太撒娇"></BackGround>
+    <Session PIC="手冢翔太" name="手冢翔太">是这样没错，但是第一步已经完成了嘛，要奖励</Session>
   </Scene>
 
   <Scene PIC="赌场背景.PNG">
     <Branch  PIC-0="男人" PIC-1="女人" PIC-2="狗" name-0="男人" name-1="女人" name-2="狗">
       <If target="男人">
-        <Session PIC="导演旁白.png" name="导演旁白">你选择了男人</Session>
-        <Session PIC="导演旁白.png" name="导演旁白">你为什么要选男人</Session>
-        <Session PIC="导演旁白.png" name="导演旁白">这个男人好看吗</Session>
+        <Session PIC="导演旁白" name="导演旁白">你选择了男人</Session>
+        <Session PIC="导演旁白" name="导演旁白">你为什么要选男人</Session>
+        <Session PIC="导演旁白" name="导演旁白">这个男人好看吗</Session>
         <Inventory target="男人">0</Inventory>
         <Jump Id="0" target="1">0</Jump>
       </If>
       <If target="女人">
-        <Session PIC="导演旁白.png" name="导演旁白">你选择了女人</Session>
+        <Session PIC="导演旁白" name="导演旁白">你选择了女人</Session>
       </If>
       <If target="狗">
-        <Session PIC="导演旁白.png" name="导演旁白">你选择了男人</Session>
+        <Session PIC="导演旁白" name="导演旁白">你选择了男人</Session>
       </If>
     </Branch>
 

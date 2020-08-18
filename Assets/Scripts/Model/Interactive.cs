@@ -14,7 +14,7 @@ public abstract class Interactive:System.Attribute
     /// <summary>
     /// XML中的值
     /// </summary>
-    public string value;
+    public string m_value;
 
     /// <summary>
     /// 输出value的值
@@ -22,7 +22,7 @@ public abstract class Interactive:System.Attribute
     /// <returns></returns>
     public override string ToString()
     {
-        return value;
+        return m_value;
     }
 
     /// <summary>
@@ -40,7 +40,7 @@ public class ComplexInteraction : Interactive
     /// <summary>
     /// 此交互结束时会传出的值
     /// </summary>
-    public string Return;
+    public string m_Return;
     /// <summary>
     /// 字交互
     /// </summary>
