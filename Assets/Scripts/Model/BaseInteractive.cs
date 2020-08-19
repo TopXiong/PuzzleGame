@@ -15,6 +15,11 @@ namespace PuzzleGame.Model
     }
 
     [AttributeUsage(AttributeTargets.All)]
+    public class Disappear : Interactive
+    {
+    }
+
+    [AttributeUsage(AttributeTargets.All)]
     public class If : ComplexInteraction
     {
         public string m_target;
