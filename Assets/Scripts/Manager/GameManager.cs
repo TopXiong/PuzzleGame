@@ -39,6 +39,7 @@ namespace PuzzleGame.Manager
                 else
                 {
                     m_SceneIndex++;
+                    m_InteractivesIndex = -1;
                     StartCoroutine(initXML(m_SceneIndex));
                 }
             }
@@ -167,7 +168,9 @@ namespace PuzzleGame.Manager
             else
             {
                 m_suspend = true;
-                GameObject prefab = Instantiate(Resources.Load("Prefabs/" + m_interactives[InteractivesIndex].GetType().Name + "/" + m_interactives[InteractivesIndex].GetType().Name, typeof(GameObject)) as GameObject);
+                string name = m_interactives[InteractivesIndex].GetType().Name;
+                Debug.Log(name);
+                GameObject prefab = Instantiate(Resources.Load("Prefabs/" + name + "/" + name, typeof(GameObject)) as GameObject);
                 prefab.transform.SetParent(m_background.transform);
                 prefab.transform.localScale = new Vector3(1, 1, 1);
                 Debug.Log(prefab.name);
@@ -182,7 +185,7 @@ namespace PuzzleGame.Manager
         /// <returns></returns>
         private IEnumerator MouseListen()
         {
-            float MouseInterval = 0.1f;
+            float MouseInterval = 0.2f;
             float MouseTime = MouseInterval;
             while (true)
             {

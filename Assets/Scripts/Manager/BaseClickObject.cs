@@ -6,16 +6,6 @@ using UnityEngine;
 
 namespace PuzzleGame.Manager
 {
-    /// <summary>
-    /// 可点击组件继承
-    /// </summary>
-    public abstract class BaseClickObject : MonoBehaviour
-    {
-        /// <summary>
-        /// 场景中的物体被点击时调用，需要有Box Collider2d组件才有效
-        /// </summary>
-        public abstract void OnClick();
-    }
 
     /// <summary>
     /// 自定义组件需要继承

@@ -15,13 +15,13 @@ namespace PuzzleGame.Manager
         /// 已结束
         /// </summary>
         private bool end = false;
-
+        Search search;
         /// <summary>
         /// 初始化
         /// </summary>
         public override void OnInit(Interactive interactive)
         {
-            Search search = interactive as Search;
+            search = interactive as Search;
             transform.Find(search.m_Item).gameObject.SetActive(true);
         }
 
@@ -34,7 +34,7 @@ namespace PuzzleGame.Manager
         // Update is called once per frame
         void FixedUpdate()
         {
-            if (transform.childCount == 0 && !end)
+            if (transform.Find(search.m_Item).childCount == 0 && !end)
             {
                 Destroy(gameObject, 2f);
                 GameManager.Instance.EndSuspend("");

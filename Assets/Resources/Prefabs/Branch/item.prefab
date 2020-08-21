@@ -8,9 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 705751181644293774}
+  - component: {fileID: 2673786946364574185}
   - component: {fileID: 705751181644293773}
-  - component: {fileID: 6839481069538953274}
   - component: {fileID: 1562956260032060675}
   m_Layer: 0
   m_Name: item
@@ -19,20 +18,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &705751181644293774
-Transform:
+--- !u!224 &2673786946364574185
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705751181644293775}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.43, y: 3.68, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -7.43, y: 3.68}
+  m_SizeDelta: {x: 7.48, y: 10.96}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &705751181644293773
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -69,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 423460771
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 8841583364694669585, guid: 0b1cce0dfd1173045bc9624f76232022,
     type: 3}
@@ -84,32 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6839481069538953274
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 705751181644293775}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 1
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.48, y: 10.96}
-    newSize: {x: 7.48, y: 10.96}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 7.48, y: 10.96}
-  m_EdgeRadius: 0
 --- !u!114 &1562956260032060675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,4 +100,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69e19fdc8b1294242b59aea1bd4c6384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
+  m_ItemName: 

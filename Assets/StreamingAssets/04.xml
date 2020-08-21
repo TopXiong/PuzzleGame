@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scenes>
+
+  <Scene PIC="BG1.PNG">
+    <BGM Music="林ゆうき - あなたの番です.wav"></BGM>
+    <BackGround PIC ="04Intro1"></BackGround>
+    <Session PIC="" name="">一切都从微不足道的一句话开始</Session>
+    <Session PIC="" name="">在纸上写下希望他死，想要杀掉的人的名字，相互交换</Session>
+    <BackGround PIC ="04Intro2"></BackGround>
+    <Session PIC="" name="">都怨这场低级趣味的游戏</Session>
+    <Disappear></Disappear>
+    <BackGround PIC ="04Intro3"></BackGround>
+    <Delay Time="2"></Delay>
+    <BackGround PIC ="04Intro4"></BackGround>
+    <Delay Time="2"></Delay>
+    <BackGround PIC ="04Intro5"></BackGround>
+    <Delay Time="2"></Delay>
+    <BackGround PIC ="04Intro6"></BackGround>
+    <Delay Time="2"></Delay>
+    <BackGround PIC ="04Intro7"></BackGround>
+    <Delay Time="2"></Delay>
+    <BackGround PIC ="04Intro8"></BackGround>
+    <Delay Time="2"></Delay>
+    <BackGround PIC ="04Intro9"></BackGround>
+    <Delay Time="2"></Delay>
+    <BackGround PIC ="04Intro10"></BackGround>
+    <Delay Time="2"></Delay>
+    <BackGround PIC ="04Intro11"></BackGround>
+    <Delay Time="2"></Delay>
+    <BackGround PIC ="04Intro12"></BackGround>
+    <Delay Time="2"></Delay>
+    <BackGround PIC ="04Intro13"></BackGround>
+    <Delay Time="2"></Delay>
+    <BackGround PIC ="04Intro14"></BackGround>
+    <Delay Time="2"></Delay>
+    <BackGround PIC ="04Intro15"></BackGround>
+    <Delay Time="2"></Delay>
+    <BackGround PIC ="04Intro16"></BackGround>
+    <Delay Time="2"></Delay>
+    <BackGround PIC ="04Intro17"></BackGround>
+    <Delay Time="2"></Delay>
+    <BGM Music=""></BGM>
+    <BackGround PIC ="04看电脑"></BackGround>
+    <Session PIC="04护士" name="手冢翔太">田中政雄 是前段时间那个病人吗</Session>
+    <Session PIC="04藤井淳史2" name="手冢菜奈">不要偷看好吗</Session>
+    <Session PIC="04护士" name="手冢翔太">我是确认你是不是在看黄片</Session>
+
+    <Disappear></Disappear>
+    <BGM Music="门铃声.wav"></BGM>
+    <Delay Time="3"></Delay>
+
+    <Session PIC="管理员" name="床岛">我是管理员床岛</Session>
+    <Session PIC="手冢菜奈" name="手冢菜奈">你好，请多多关照</Session>
+    <Session PIC="管理员" name="床岛">你们不主动来打招呼，我就自己上门了</Session>
+    <Session PIC="手冢菜奈" name="手冢菜奈">对不起</Session>
+    <Session PIC="管理员" name="床岛">玩笑而已</Session>
+    <Session PIC="手冢菜奈" name="手冢菜奈">请问这是。。。</Session>
+    <Session PIC="管理员" name="床岛">确认房间状况，以免搬走的时候出现纠纷</Session>
+    <Session PIC="手冢菜奈" name="手冢菜奈">不好意思，这个房子是我们买下来的</Session>
+    <BackGround PIC ="管理员拍照"></BackGround>
+    <Session PIC="管理员" name="床岛">天花板上有两处感觉不对的斑点</Session>
+    <Session PIC="手冢菜奈" name="手冢菜奈">那个，我们不是贷款买房，有必要这样检查吗</Session>
+    <Session PIC="管理员" name="床岛">没必要啊</Session>
+    <Session PIC="手冢菜奈" name="手冢菜奈">啊</Session>
+    <Session PIC="管理员" name="床岛">算了，这个送你，我给每家都发过一个</Session>
+    <BackGround PIC ="01门牌"></BackGround>
+    <Session PIC="手冢翔太" name="手冢翔太">就是这个吗</Session>
+    <Session PIC="手冢菜奈" name="手冢菜奈">好像是那个管理员亲手做的</Session>
+    <Session PIC="手冢翔太" name="手冢翔太">欸，这还是手工的吗，好厉害</Session>
+    <Session PIC="手冢菜奈" name="手冢菜奈">他说每户搬进来的时候，他都会送一个,然后自说自话的挂上了</Session>
+    <Session PIC="手冢翔太" name="手冢翔太">不是挺好看的吗</Session>
+    <Session PIC="手冢菜奈" name="手冢菜奈">开玩笑吧</Session>
+    <Session PIC="" name="">说着菜奈便把门牌取了下来</Session>
+    <Session PIC="手冢翔太" name="手冢翔太">等等等下，刚挂上去就摘下来也太不给别人面子了吧</Session>
+    <Session PIC="手冢菜奈" name="手冢菜奈">毕竟咱家对面的也没挂</Session>
+    <Session PIC="手冢翔太" name="手冢翔太">但是但是，你看这边，这家人挂着啊</Session>
+    <Session PIC="手冢翔太" name="手冢翔太">会是怎样的人呢？</Session>
+
+    <BackGround PIC ="01访问邻居1"></BackGround>
+    <Session PIC="手冢翔太" name="手冢翔太">你好</Session>
+    <Session PIC="手冢翔太" name="手冢翔太">我们是刚搬来隔壁的，我叫手冢</Session>
+    <BackGround PIC ="01访问邻居2"></BackGround>
+    <Session PIC="尾野干叶" name="尾野干叶">我叫尾野，请多关照</Session>
+    <Session PIC="手冢翔太" name="手冢翔太">请多关照</Session>
+    <Session PIC="手冢菜奈" name="手冢菜奈">我们准备了这个，不知道合不合心意</Session>
+    <Session PIC="" name="">菜奈把礼物通过门缝递给了对方</Session>
+    <Session PIC="尾野干叶" name="尾野干叶">太客气了</Session>
+    <Session PIC="尾野干叶" name="尾野干叶">一会儿大家会集中开一个居民会议</Session>
+    <Session PIC="尾野干叶" name="尾野干叶">到时候我会把你们介绍给大家</Session>
+    <Session PIC="尾野干叶" name="尾野干叶">每家派一个人就行了，每个月都要开一次</Session>
+    <Session PIC="尾野干叶" name="尾野干叶">那一会见</Session>
+    <Session PIC="手冢翔太" name="手冢翔太">好的</Session>
+
+    <BackGround PIC ="01开会1"></BackGround>
+    <Session PIC="" name="">闲聊中...</Session>
+    <Session PIC="手冢菜奈" name="手冢菜奈">我叫手冢，请多关照</Session>
+    <Session PIC="石崎洋子" name="石崎洋子">她丈夫在健身房当私教哦</Session>
+    <Session PIC="藤井淳史" name="藤井淳史">你们家是夫妻都工作啊</Session>
+    <Session PIC="赤池美里" name="赤池美里">那位是你丈夫啊，我一直以为那是你弟弟</Session>
+    <Session PIC="尾野干叶" name="尾野干叶">你们年纪差了不少吧</Session>
+    <Session PIC="手冢菜奈" name="手冢菜奈">我比我丈夫大15岁</Session>
+    <Session PIC="管理员" name="床岛">而且你们还没孩子</Session>
+    <Session PIC="管理员" name="床岛">我检查过你们有没有养宠物</Session>
+    <Session PIC="藤井淳史" name="藤井淳史">大家都很反感哦，搬家第一天就被你从里到外地检查一遍</Session>
+    <Session PIC="管理员" name="床岛">这是什么话，没孩子的夫妻，特别喜欢养猫</Session>
+    <Session PIC="北川澄香" name="北川澄香">你这算什么偏见</Session>
+    <Session PIC="田宫淳一郎" name="田宫淳一郎">对不起各位，我迟到了</Session>
+    <Session PIC="石崎洋子" name="石崎洋子">会议三分钟后才开始啊</Session>
+    <Session PIC="田宫淳一郎" name="田宫淳一郎">说好提前五分钟集合，我迟到了两分钟，真是丢脸</Session>
+    <BackGround PIC ="01开会2"></BackGround>
+    <Session PIC="田宫淳一郎" name="田宫淳一郎">会长，开始吧</Session>
+    <Session PIC="榎本早苗" name="榎本早苗">好的</Session>
+    <Session PIC="榎本早苗" name="榎本早苗">本次会议出席13人，缺席5人，没问题吧</Session>
+    <Session PIC="榎本早苗" name="榎本早苗">那么接下来，请允许我开始本月的居民会</Session>
+    <Session PIC="榎本早苗" name="榎本早苗">首先，关于本年度的值日负责人，上回只剩清扫委员没有决定了</Session>
+    <Session PIC="榎本早苗" name="榎本早苗">不知是否有人报名候选呢？</Session>
+    <Session PIC="浮田启辅" name="浮田启辅">那不应该是管理员的工作吗？</Session>
+    <Session PIC="管理员" name="床岛">不是，之前有人反对上调物业费！</Session>
+    <Session PIC="管理员" name="床岛">所以作为交换条件，垃圾房的打扫由各位负责！</Session>
+    <Session PIC="管理员" name="床岛">这事上回已经通过多数投票表决了！</Session>
+    <Session PIC="浮田启辅" name="浮田启辅">知道了知道了</Session>
+    <Session PIC="管理员" name="床岛">知道什么知道！通过多数投票表决就是...</Session>
+    <Session PIC="田宫淳一郎" name="田宫淳一郎">床岛先生 床岛先生，你能小声点吗</Session>
+    <Session PIC="管理员" name="床岛">田宫先生你</Session>
+    <Session PIC="田宫淳一郎" name="田宫淳一郎">床岛先生！</Session>
+    <Session PIC="" name="">被田宫压制下来的床岛终于回到原位重新坐下</Session>
+    <Session PIC="田宫淳一郎" name="田宫淳一郎">物业费交多少才合适，我也很难定论，所以并不是要理论是非</Session>
+    <Session PIC="田宫淳一郎" name="田宫淳一郎">只是我认为，自己打扫自己生活的环境，是在此生活的根本</Session>
+    <Session PIC="田宫淳一郎" name="田宫淳一郎">我知道各位平时忙于工作，但至少清扫垃圾房这件小事，还是由我们自己来做吧</Session>
+    <Session PIC="" name="">之后众人通过写纸条的方式开始投票来决定清扫委员，由管理员汇报，会长统计...</Session>
+    <Session PIC="管理员" name="床岛">木下女士，接下来...</Session>
+    <Session PIC="管理员" name="床岛">又是木下女士</Session>
+    <Session PIC="管理员" name="床岛">以上</Session>
+    <Session PIC="榎本早苗" name="榎本早苗">那么，投票决定清扫委员由401室的木下女士担任</Session>
+    <Session PIC="石崎洋子" name="石崎洋子">请问...木下女士今天并没有来，这样没关系吗？</Session>
+    <Session PIC="管理员" name="床岛">要是有怨言，就和那7个看她没来，还投票她的人说吧</Session>
+    <Session PIC="" name="">床岛指向统计数据的白板如是说道</Session>
+    <Session PIC="浮田启辅" name="浮田启辅">这不就好了吗？本来木下就很计较垃圾分类，她当了清扫委员应该很高兴吧</Session>
+    <Session PIC="管理员" name="床岛">也就是说，强迫木下女士做这个没问题吧</Session>
+    <Session PIC="藤井淳史" name="藤井淳史">你这是什么话！</Session>
+    <Session PIC="管理员" name="床岛">你干什么？</Session>
+    <Session PIC="榎本早苗" name="榎本早苗">别 别 别吵</Session>
+    <Session PIC="榎本早苗" name="榎本早苗">就这样决定了，结束会议吧，好吗？</Session>
+    <Session PIC="" name="">会长起身及时制止了即将吵起来的两人</Session>
+
+    <BackGround PIC ="01会后杂谈"></BackGround>
+    <Session PIC="" name="">接下来是每次会议结束之后都有的畅谈时间，手冢菜奈在管理员的强烈邀请下不得不参加这次谈话，然而首次参加的手冢并不知道接下来会发生什么...</Session>
+    <Session PIC="管理员" name="床岛">新住户</Session>
+    <Session PIC="手冢菜奈" name="手冢菜奈">我在</Session>
+    <Session PIC="管理员" name="床岛">你想杀了我吗？</Session>
+    <Session PIC="" name="">面对管理员莫名其妙的问题，手冢一时摸不到头脑</Session>
+    <Session PIC="藤井淳史" name="藤井淳史">干嘛干嘛</Session>
+    <Session PIC="" name="">藤井走向管理员想要打断他的提问</Session>
+    <Session PIC="管理员" name="床岛">这不是你说的吗！</Session>
+    <Session PIC="管理员" name="床岛">这个家伙啊，说住在这里的人，大家都讨厌我，说认识我3分钟就能萌生杀意</Session>
+    <Session PIC="藤井淳史" name="藤井淳史">刚开始是这样啊，现在没有</Session>
+    <Session PIC="管理员" name="床岛">所以我在问新来的啊！</Session>
+    <Session PIC="" name="">床岛转向手冢问道</Session>
+    <Session PIC="管理员" name="床岛">我问你，刚才见到我的时候，有没有想杀了我</Session>
+    <Session PIC="手冢菜奈" name="手冢菜奈">怎么会呢</Session>
+    <Session PIC="石崎洋子" name="石崎洋子">怎么会这么想呢</Session>
+    <Session PIC="管理员" name="床岛">没事的，别紧张</Session>
+    <Session PIC="管理员" name="床岛">反正人嘛，总会有一瞬间，想杀了某个人，或者希望某个人死掉吧</Session>
+    <Session PIC="石崎洋子" name="石崎洋子">才没有这种想法</Session>
+    <Session PIC="管理员" name="床岛">一般都有的，都有吧？</Session>
+    <Session PIC="" name="">床岛转向众人，询问道。</Session>
+    <Session PIC="" name="">众人沉默...</Session>
+    <Session PIC="田宫淳一郎" name="田宫淳一郎">不管有没有，换个话题吧</Session>
+    <Session PIC="浮田启辅" name="浮田启辅">没想到他死的程度，但如果是希望某个人消失的话，是有的</Session>
+    <Session PIC="管理员" name="床岛">你在说什么，不都是一个意思吗？</Session>
+    <Session PIC="浮田启辅" name="浮田启辅">对了，我最讨厌那种人，到秋天还不取下风铃的人，叮铃叮铃的，吵死了，没错吧？</Session>
+    <Session PIC="榎本早苗" name="榎本早苗">但是就因为这点事你就要杀了这个人吗？</Session>
+    <Session PIC="浮田启辅" name="浮田启辅">要是不逮捕我的话确实想杀，可我一定会被逮捕吧</Session>
+    <Session PIC="手冢菜奈" name="手冢菜奈">警察的话...</Session>
+    <Session PIC="" name="">听到手冢的声音，众人纷纷看向手冢</Session>
+    <Session PIC="手冢菜奈" name="手冢菜奈">警察的话会先从受害人的熟人里开始调查，看看是否有人有杀人动机</Session>
+    <Session PIC="手冢菜奈" name="手冢菜奈">所以只要有冬季，哪怕只是一点小事情，最终也一定会被逮捕</Session>
+    <Session PIC="" name="">众人纷纷点头...</Session>
+    <Session PIC="赤池美里" name="赤池美里">你知道的真多</Session>
+    <Session PIC="手冢菜奈" name="手冢菜奈">我们夫妻二人都是侦探小说爱好者</Session>
+    <Session PIC="久住让" name="久住让">反过来说，只要没有动机，就很难暴露自己是吗？</Session>
+    <Session PIC="久住让" name="久住让">假设我委托杀手，杀害会长，但是杀后和会长不是熟人关系</Session>
+    <Session PIC="手冢菜奈" name="手冢菜奈">那应该很难暴露</Session>
+    <Session PIC="榎本早苗" name="榎本早苗">怎么感觉，话题越来越恐怖了</Session>
+    <Session PIC="赤池美里" name="赤池美里">不过，我有点好奇你们每个人的杀人对象</Session>
+    <Session PIC="管理员" name="床岛">那就这样吧，大家都说出自己想杀的人吧</Session>
+    <Session PIC="榎本早苗" name="榎本早苗">不要啊，这有什么意义啊</Session>
+    <Session PIC="管理员" name="床岛">说实话，大家也玩腻了狼人杀吧</Session>
+    <Session PIC="浮田启辅" name="浮田启辅">我不赞成让所有人都知道，要是之告诉其中某一个人就好了</Session>
+    <Session PIC="久住让" name="久住让">我知道了，那这样，用我们刚刚的投票箱吧，在纸上写下每个人想杀的人，不能看别人的纸</Session>
+    <BackGround PIC ="01写纸条1"></BackGround>
+    <Session PIC="石崎洋子" name="石崎洋子">那个...不好意思，要不我们还是...别写了吧？</Session>
+    <Session PIC="管理员" name="床岛">哈哈，这就是场游戏，还是说，你真的有想杀的人吗？</Session>
+    <BackGround PIC ="01写纸条2"></BackGround>
+    <Session PIC="" name="">手冢环顾四周，发现大家都已经在写东西了，经过漫长的思考，手冢在纸上写上了名字</Session>
+    <BackGround PIC ="01抽纸条"></BackGround>
+    <Session PIC="管理员" name="床岛">各位，写好了的话，就放入这个罐子里</Session>
+    <Session PIC="久住让" name="久住让">接下来，就按刚刚所说，以圣诞节晚会上的规则来进行交换</Session>
+    <Session PIC="" name="">虽说只是一个游戏，这也是第一次看到了别人写下的杀人对象，而这个人，现在一定还不知道，自己已经成为别人的目标了吧</Session>
+
+    <BackGround PIC ="01木下看公告"></BackGround>
+    <Session PIC="" name="">这到底是谁擅自决定的，竟然要我来当清扫委员，心里满是抱怨的木下不停的拿着手中的大头钉向清扫委员几个字刺去</Session>
+    <BackGround PIC ="01吃晚饭"></BackGround>
+    <Session PIC="手冢翔太" name="手冢翔太">我吃完了，真好吃</Session>
+    <Session PIC="手冢菜奈" name="手冢菜奈">谢谢夸奖</Session>
+    <Session PIC="手冢翔太" name="手冢翔太">不过你吃这么点真的够吗，你也不用逼着自己跟着我一起控糖</Session>
+    <Session PIC="手冢菜奈" name="手冢菜奈">我没有逼着自己啦</Session>
+    <Session PIC="手冢翔太" name="手冢翔太">真的吗？我保持体形那都是作为教练所必需的</Session>
+    <Session PIC="手冢菜奈" name="手冢菜奈">我就只是减肥而已啦</Session>
+    <Session PIC="手冢翔太" name="手冢翔太">好吧</Session>
+    <BackGround PIC ="01发现钥匙"></BackGround>
+    <Session PIC="" name="">翔太吃完饭在沙发上趴下，虽说只是无意间把头往沙发下看了看，却发现了一串钥匙</Session>
+    <Session PIC="手冢翔太" name="手冢翔太">钥匙是你的吗？</Session>
+    <Session PIC="手冢菜奈" name="手冢菜奈">会不会是管理员的啊，刚刚他来过一趟</Session>
+    <Session PIC="手冢翔太" name="手冢翔太">那我去还给他，反正我也没见过他，刚好打个招呼</Session>
+    <BackGround PIC ="01找管理员1"></BackGround>
+    <Session PIC="" name="">翔太来到了一楼的管理员室，感觉到这里曾有人来过，管理员室的门也并没锁，一番询问也并没有人响应</Session>
+    <BackGround PIC ="01找管理员2"></BackGround>
+    <Session PIC="手冢翔太" name="手冢翔太">没人啊，他是不是已经回家了</Session>
+    <Session PIC="手冢菜奈" name="手冢菜奈">反正我们知道在哪找他，明天再还吧</Session>
+    <Session PIC="手冢翔太" name="手冢翔太">但是他没有钥匙会不会不太方便啊，我试了试，也不是管理员室的钥匙</Session>
+    <Session PIC="手冢菜奈" name="手冢菜奈">那会不会是他们家的钥匙呢，但是这个好像是轿车或者自行车的钥匙吧</Session>
+    <Session PIC="手冢翔太" name="手冢翔太">不管是不是，我还是先给他打个电话吧</Session>
+    <Session PIC="手冢菜奈" name="手冢菜奈">嗯</Session>
+    <Session PIC="" name="">翔太拨打了电话，但奇怪的是在家里听到了手机响起的声音</Session>
+    <Session PIC="手冢菜奈" name="手冢菜奈">外面传来的吗？</Session>
+    <BackGround PIC ="01找管理员3"></BackGround>
+    <Session PIC="" name="">二人朝着声源的阳台走去...</Session>
+    <BackGround PIC ="01发现管理员1"></BackGround>
+    <Session PIC="" name="">翔太鼓起勇气，猛地拉开窗帘，只见到管理员被电线缠绕着，倒挂在外面</Session>
+    <Session PIC="" name="">两人还没来的及从惊讶中反应过来，管理员便从阳台上掉了下去</Session>
+    <BackGround PIC ="01发现管理员2"></BackGround>
+    <Session PIC="" name="">最后结果自然不用说，管理员由于被电线束缚无法动身摔死了......</Session>
+    <BackGround PIC ="01结尾"></BackGround>
+    <Session PIC="" name="">也不知道是否有人发现，原先张布清扫委员的公告旁边，被人用大头钉顶住了一张纸条，纸条上写着“ 管 理 员 ”三个字......</Session>
+ 
+  </Scene>
+  
+ </Scenes>

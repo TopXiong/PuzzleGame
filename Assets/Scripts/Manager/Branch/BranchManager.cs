@@ -33,7 +33,7 @@ namespace PuzzleGame.Manager
                 GameObject gameObject = Instantiate(m_item);
                 gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load("Image/" + m_branch.m_PIC[i], typeof(Sprite)) as Sprite;
                 gameObject.transform.SetParent(transform);
-                gameObject.GetComponent<BranchItem>().m_Name = m_branch.m_name[i];
+                gameObject.GetComponent<BranchItem>().m_ItemName = m_branch.m_name[i];
                 list.Add(gameObject);
                 width += gameObject.GetComponent<SpriteRenderer>().sprite.rect.width;
                 height += gameObject.GetComponent<SpriteRenderer>().sprite.rect.height;

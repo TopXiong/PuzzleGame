@@ -28,6 +28,9 @@ namespace PuzzleGame.Manager
                 if (time <= 0)
                 {
                     GameManager.Instance.EndSuspend("");
+                    GameManager.Instance.InteractivesIndex++;
+                    gameObject.SetActive(false);
+                    Destroy(gameObject, 1f);
                 }
                 yield return null;
             }
